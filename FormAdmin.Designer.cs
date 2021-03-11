@@ -31,18 +31,19 @@
             this.dtLog = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPages = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dtUser = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgEchec = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dtUser = new System.Windows.Forms.DataGridView();
+            this.buttonAddUser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtLog)).BeginInit();
             this.tabPages.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtUser)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgEchec)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtUser)).BeginInit();
             this.SuspendLayout();
             // 
             // dtLog
@@ -75,6 +76,26 @@
             this.tabPages.Size = new System.Drawing.Size(785, 335);
             this.tabPages.TabIndex = 2;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dtUser);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(777, 309);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "User";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dtUser
+            // 
+            this.dtUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtUser.Location = new System.Drawing.Point(1, 0);
+            this.dtUser.Name = "dtUser";
+            this.dtUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtUser.Size = new System.Drawing.Size(776, 309);
+            this.dtUser.TabIndex = 1;
+            this.dtUser.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtUser_CellDoubleClick);
+            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dtLog);
@@ -105,42 +126,33 @@
             this.dgEchec.Size = new System.Drawing.Size(719, 295);
             this.dgEchec.TabIndex = 3;
             // 
-            // tabPage3
+            // buttonAddUser
             // 
-            this.tabPage3.Controls.Add(this.dtUser);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(777, 309);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "User";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // dtUser
-            // 
-            this.dtUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtUser.Location = new System.Drawing.Point(1, 0);
-            this.dtUser.Name = "dtUser";
-            this.dtUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtUser.Size = new System.Drawing.Size(776, 309);
-            this.dtUser.TabIndex = 1;
-            this.dtUser.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtUser_CellDoubleClick);
+            this.buttonAddUser.Location = new System.Drawing.Point(485, 12);
+            this.buttonAddUser.Name = "buttonAddUser";
+            this.buttonAddUser.Size = new System.Drawing.Size(124, 23);
+            this.buttonAddUser.TabIndex = 3;
+            this.buttonAddUser.Text = "Ajouter un utilisateur";
+            this.buttonAddUser.UseVisualStyleBackColor = true;
+            this.buttonAddUser.Click += new System.EventHandler(this.buttonAddUser_Click);
             // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 388);
+            this.Controls.Add(this.buttonAddUser);
             this.Controls.Add(this.tabPages);
             this.Controls.Add(this.button1);
             this.Name = "FormAdmin";
             this.Text = "FormAdmin";
             ((System.ComponentModel.ISupportInitialize)(this.dtLog)).EndInit();
             this.tabPages.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtUser)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgEchec)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -155,5 +167,6 @@
         private System.Windows.Forms.DataGridView dgEchec;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataGridView dtUser;
+        private System.Windows.Forms.Button buttonAddUser;
     }
 }

@@ -166,5 +166,11 @@ namespace ppe1
             
             
         }
+
+        private void buttonAddUser_Click(object sender, EventArgs e)
+        {
+            AddUser addUser = new AddUser();
+            addUser.ShowDialog();
+        }
     }
 }

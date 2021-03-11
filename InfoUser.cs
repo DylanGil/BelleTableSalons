@@ -65,34 +65,15 @@ namespace ppe1
                     _password = value;
             }
         }
-
-        public string Save(string choix)
-        {
-            if (choix == "modification")
-            {
-                return "On va faire la modification de " + _nom + " " + _prenom;
-            }
-            else if (choix == "nouveau")
-            {
-                return "On va crée la personne " + _nom + " " + _prenom;
-            }
-            else
-            {
-                return "gros bug, bien joué le hackeur";
-            }
-            return "j'ai bien reussi à appeler " + _nom + " " + _prenom;
-        }
-
-
         public string Save(string choix, string newNom, string newPrenom, string newPassword, int newRole, int hisId)
         {
+            MySqlConnection conn = new MySqlConnection(_connexionString);
+            string safePassword = SHA.petitsha(newPassword);
             if (choix == "modification")
             {
-                MySqlConnection conn = new MySqlConnection(_connexionString);
                 try
                 {
                     conn.Open();
-                    string safePassword = SHA.petitsha(newPassword);
                     string sql = "";
                     string sqlGetPassword = "SELECT password FROM `user` WHERE id =" + hisId;
                     string bddPassword = "";
@@ -127,8 +108,36 @@ namespace ppe1
 
                 return "La modification de " + _nom + " " + _prenom + " a bien été effectué ";
             }
-            else if (choix == "nouveau")
+            else if (choix == "creation")
             {
+                try
+                {
+                    conn.Open();
+                    string sql1 = "SELECT * FROM user where `nom` = \"" + newNom + "\" and `prenom`=\"" + newPrenom + "\" and `password` = \"" + safePassword + "\"";
+                    MySqlCommand cmd1 = new MySqlCommand(sql1, conn);
+                    MySqlDataReader rdr1 = cmd1.ExecuteReader();//Curseur
+
+                    if (rdr1.HasRows)
+                    {
+                        rdr1.Close();
+                        return ("L'utilisateur est déjà inscrits");
+                    }
+                    else
+                    {
+                        rdr1.Close();
+                        string sql = "INSERT INTO user (nom, prenom, password, role) VALUES (\'" + newNom + "\',\'" + newPrenom + "\',\'" + safePassword + "\',\'" + newRole + "\')";
+                        MySqlCommand cmd = new MySqlCommand(sql, conn);
+                        MySqlDataReader rdr = cmd.ExecuteReader();//Curseur
+                        rdr.Close();
+                        return("Inscription réussite");
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine(ex);
+                }
                 return "On va crée la personne " + _nom + " " + _prenom;
             }
             else
