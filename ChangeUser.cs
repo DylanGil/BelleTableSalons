@@ -108,7 +108,7 @@ namespace ppe1
 
         private void buttonMAJ_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(infoUser.Save("modification"));
+            MessageBox.Show(infoUser.Save("modification", tbNom.Text, tbPrenom.Text, tbChangeMdp.Text, infoUser.Role, infoUser.Id));
         }
     }
 }
