@@ -61,12 +61,11 @@ namespace ppe1
             dtLog.Columns[5].Name = "DateFin";
 
             //dataGridFailConnection
-            this.dgEchec.ColumnCount = 4;
-            dgEchec.Columns[3].Width = 150;
+            this.dgEchec.ColumnCount = 3;
+            dgEchec.Columns[2].Width = 150;
             dgEchec.Columns[0].Name = "IDechec";
             dgEchec.Columns[1].Name = "Nom";
-            dgEchec.Columns[2].Name = "Mot De Passe";
-            dgEchec.Columns[3].Name = "Date";
+            dgEchec.Columns[2].Name = "Date";
 
             checkUser();
             checkLog();
@@ -138,7 +137,7 @@ namespace ppe1
                 {
                     while (rdr.Read())
                     {
-                        dgEchec.Rows.Add(rdr[0], rdr[1], rdr[2], rdr[3]);
+                        dgEchec.Rows.Add(rdr[0], rdr[1], rdr[3]);
                     }
                 }
                 else
@@ -162,6 +161,7 @@ namespace ppe1
                 InfoUser clickedUser = row.DataBoundItem as InfoUser;
                 ChangeUser changeUser = new ChangeUser(clickedUser);
                 changeUser.ShowDialog();
+                checkUser();
             }
             
             
@@ -171,6 +171,7 @@ namespace ppe1
         {
             AddUser addUser = new AddUser();
             addUser.ShowDialog();
+            checkUser();
         }
     }
 }

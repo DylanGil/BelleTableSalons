@@ -18,6 +18,9 @@ namespace ppe1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            CreatePDF.generatePDF();
+
             InfoUser infoUser = new InfoUser();
             Login MonFormLogin = new Login(infoUser);
             MonFormLogin.ShowDialog();

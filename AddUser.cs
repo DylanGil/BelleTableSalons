@@ -25,10 +25,11 @@ namespace ppe1
             int rbSelected = 0;
             if (rbAdmin.Checked == true)
                 rbSelected = 2;
-            if (rbInvite.Checked == true)
-                rbSelected = 1;
             if (rbUtilisateur.Checked == true)
+                rbSelected = 1;
+            if (rbInvite.Checked == true)
                 rbSelected = 0;
+            
             MessageBox.Show(infoUser.Save("creation", tbNom.Text, tbPrenom.Text, tbPassword.Text, rbSelected, 0));
             this.DialogResult = DialogResult.OK;
 

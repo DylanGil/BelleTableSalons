@@ -99,28 +99,28 @@ namespace ppe1
                         MySqlCommand cmd = conn.CreateCommand();
                         cmd.CommandText = sql;
                         cmd.ExecuteNonQuery();
+                        return "L'utilisateur " + newNom + " " + newPrenom + " à été modifié";
                     }
                 }
                 catch (Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine(ex);
+                    return "erreur sql";
                 }
-
-                return "La modification de " + _nom + " " + _prenom + " a bien été effectué ";
             }
             else if (choix == "creation")
             {
                 try
                 {
                     conn.Open();
-                    string sql1 = "SELECT * FROM user where `nom` = \"" + newNom + "\" and `prenom`=\"" + newPrenom + "\" and `password` = \"" + safePassword + "\"";
+                    string sql1 = "SELECT * FROM user where `nom` = \"" + newNom + "\" and `prenom`=\"" + newPrenom + "\"";
                     MySqlCommand cmd1 = new MySqlCommand(sql1, conn);
                     MySqlDataReader rdr1 = cmd1.ExecuteReader();//Curseur
 
                     if (rdr1.HasRows)
                     {
                         rdr1.Close();
-                        return ("L'utilisateur est déjà inscrits");
+                        return "L'utilisateur existe déjà";
                     }
                     else
                     {
@@ -129,7 +129,7 @@ namespace ppe1
                         MySqlCommand cmd = new MySqlCommand(sql, conn);
                         MySqlDataReader rdr = cmd.ExecuteReader();//Curseur
                         rdr.Close();
-                        return("Inscription réussite");
+                        return "L'utilisateur " + newNom + " " + newPrenom + " à été inscrit";
                     }
 
 
@@ -137,14 +137,10 @@ namespace ppe1
                 catch (Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine(ex);
+                    return "erreur sql";
                 }
-                return "On va crée la personne " + _nom + " " + _prenom;
             }
-            else
-            {
-                return "gros bug, bien joué le hackeur";
-            }
-            return "j'ai bien reussi à appeler " + _nom + " " + _prenom;
+            return "not edit and not add";
         }
     }
 }

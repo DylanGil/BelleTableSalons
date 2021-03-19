@@ -108,7 +108,15 @@ namespace ppe1
 
         private void buttonMAJ_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(infoUser.Save("modification", tbNom.Text, tbPrenom.Text, tbChangeMdp.Text, infoUser.Role, infoUser.Id));
+            int rbSelected = 0;
+            if (rbAdmin.Checked == true)
+                rbSelected = 2;
+            if (rbUtilisateur.Checked == true)
+                rbSelected = 1;
+            if (rbInvite.Checked == true)
+                rbSelected = 0;
+            MessageBox.Show(infoUser.Save("modification", tbNom.Text, tbPrenom.Text, tbChangeMdp.Text, rbSelected, infoUser.Id));
+            this.DialogResult = DialogResult.OK;
         }
     }
 }
