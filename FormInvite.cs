@@ -40,5 +40,15 @@ namespace ppe1
         {
             MessageBox.Show("Bonjour " + infoUser.Nom + " " + infoUser.Prenom + "\nVous êtes un : Invite\nVotre ID est : " + infoUser.Id);
         }
+
+        private void buttonAide_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FormAide testDialog = new FormAide(infoUser);
+                testDialog.ShowDialog();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.ToString()); }
+        }
     }
 }

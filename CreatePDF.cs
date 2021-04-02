@@ -16,6 +16,8 @@ namespace ppe1
     {
         public static void generatePDF()
         {
+
+
             PdfDocument document = new PdfDocument();
 
             document.Info.Title = "Dylan 1 PDF";
@@ -23,8 +25,29 @@ namespace ppe1
             PdfPage page = document.AddPage();
 
             XGraphics gfx = XGraphics.FromPdfPage(page);
-            XFont font = new XFont("Code 128", 20);
+            XFont font = new XFont("Code 128", 60, XFontStyle.Regular);
             gfx.DrawString("informations de l'utilisateur", font, XBrushes.Black,
+            new XRect(0, 0, page.Width, page.Height),
+            XStringFormats.Center);
+            const string filename = "BadgeUtilisateur.pdf";
+
+            document.Save(filename);
+
+            Process.Start(filename);
+        }
+
+        public static void generatePDFNom(string PrenomNom)
+        {
+
+
+            PdfDocument document = new PdfDocument();
+            document.Info.Title = PrenomNom + " PDF";
+
+            PdfPage page = document.AddPage();
+
+            XGraphics gfx = XGraphics.FromPdfPage(page);
+            XFont font = new XFont("Code 128", 60, XFontStyle.Regular);
+            gfx.DrawString(PrenomNom, font, XBrushes.Black,
             new XRect(0, 0, page.Width, page.Height),
             XStringFormats.Center);
             const string filename = "BadgeUtilisateur.pdf";

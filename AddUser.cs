@@ -34,5 +34,11 @@ namespace ppe1
             this.DialogResult = DialogResult.OK;
 
         }
+
+        private void buttonPDF_Click(object sender, EventArgs e)
+        {
+            string test = tbNom.Text + " " + tbPrenom.Text;
+            CreatePDF.generatePDFNom(tbNom.Text + " " + tbPrenom.Text);
+        }
     }
 }

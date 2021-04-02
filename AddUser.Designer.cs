@@ -38,6 +38,7 @@
             this.rbUtilisateur = new System.Windows.Forms.RadioButton();
             this.labelPrenom = new System.Windows.Forms.Label();
             this.tbPrenom = new System.Windows.Forms.TextBox();
+            this.buttonPDF = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addButton
@@ -130,11 +131,22 @@
             this.tbPrenom.Size = new System.Drawing.Size(198, 20);
             this.tbPrenom.TabIndex = 2;
             // 
+            // buttonPDF
+            // 
+            this.buttonPDF.Location = new System.Drawing.Point(343, 315);
+            this.buttonPDF.Name = "buttonPDF";
+            this.buttonPDF.Size = new System.Drawing.Size(97, 23);
+            this.buttonPDF.TabIndex = 28;
+            this.buttonPDF.Text = "Generer PDF";
+            this.buttonPDF.UseVisualStyleBackColor = true;
+            this.buttonPDF.Click += new System.EventHandler(this.buttonPDF_Click);
+            // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonPDF);
             this.Controls.Add(this.labelPrenom);
             this.Controls.Add(this.tbPrenom);
             this.Controls.Add(this.rbAdmin);
@@ -164,5 +176,6 @@
         private System.Windows.Forms.RadioButton rbUtilisateur;
         private System.Windows.Forms.Label labelPrenom;
         private System.Windows.Forms.TextBox tbPrenom;
+        private System.Windows.Forms.Button buttonPDF;
     }
 }

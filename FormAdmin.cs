@@ -67,9 +67,20 @@ namespace ppe1
             dgEchec.Columns[1].Name = "Nom";
             dgEchec.Columns[2].Name = "Date";
 
+            //dataGridRemarques
+            this.dgRemarques.ColumnCount = 4;
+            dgRemarques.Columns[0].Width = 150;
+            dgRemarques.Columns[2].Width = 250;
+            dgRemarques.Columns[3].Width = 150;
+            dgRemarques.Columns[0].Name = "Demandeurs";
+            dgRemarques.Columns[1].Name = "Type";
+            dgRemarques.Columns[2].Name = "Commentaire";
+            dgRemarques.Columns[3].Name = "Date";
+
             checkUser();
             checkLog();
             checkEchec();
+            checkRemarques();
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -143,6 +154,35 @@ namespace ppe1
                 else
                 {
                     MessageBox.Show("Les logs d'echec sont vides");
+                }
+                rdr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void checkRemarques()
+        {
+            MySqlConnection conn = new MySqlConnection(_connexionString);
+            try
+            {
+                conn.Open();
+                string sql = "SELECT * FROM remarques ORDER BY date DESC";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader rdr = cmd.ExecuteReader();//Curseur
+
+                if (rdr.HasRows)
+                {
+                    while (rdr.Read())
+                    {
+                        dgRemarques.Rows.Add(rdr[4], rdr[1], rdr[3], rdr[2]);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Il n'y a pas de remarques");
                 }
                 rdr.Close();
             }

@@ -37,6 +37,8 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgEchec = new System.Windows.Forms.DataGridView();
             this.buttonAddUser = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.dgRemarques = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dtLog)).BeginInit();
             this.tabPages.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -44,6 +46,8 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgEchec)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgRemarques)).BeginInit();
             this.SuspendLayout();
             // 
             // dtLog
@@ -70,6 +74,7 @@
             this.tabPages.Controls.Add(this.tabPage3);
             this.tabPages.Controls.Add(this.tabPage1);
             this.tabPages.Controls.Add(this.tabPage2);
+            this.tabPages.Controls.Add(this.tabPage4);
             this.tabPages.Location = new System.Drawing.Point(12, 41);
             this.tabPages.Name = "tabPages";
             this.tabPages.SelectedIndex = 0;
@@ -136,6 +141,25 @@
             this.buttonAddUser.UseVisualStyleBackColor = true;
             this.buttonAddUser.Click += new System.EventHandler(this.buttonAddUser_Click);
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.dgRemarques);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(777, 309);
+            this.tabPage4.TabIndex = 0;
+            this.tabPage4.Text = "Remarques";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // dgRemarques
+            // 
+            this.dgRemarques.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgRemarques.Location = new System.Drawing.Point(2, 0);
+            this.dgRemarques.Name = "dgRemarques";
+            this.dgRemarques.Size = new System.Drawing.Size(719, 295);
+            this.dgRemarques.TabIndex = 4;
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,6 +177,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgEchec)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgRemarques)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -168,5 +194,7 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataGridView dtUser;
         private System.Windows.Forms.Button buttonAddUser;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.DataGridView dgRemarques;
     }
 }

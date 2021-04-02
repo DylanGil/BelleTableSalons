@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
+            this.buttonAide = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -41,11 +42,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // buttonAide
+            // 
+            this.buttonAide.Location = new System.Drawing.Point(182, 168);
+            this.buttonAide.Name = "buttonAide";
+            this.buttonAide.Size = new System.Drawing.Size(75, 23);
+            this.buttonAide.TabIndex = 1;
+            this.buttonAide.Text = "Aide";
+            this.buttonAide.UseVisualStyleBackColor = true;
+            this.buttonAide.Click += new System.EventHandler(this.buttonAide_Click);
+            // 
             // FormInvite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 264);
+            this.Controls.Add(this.buttonAide);
             this.Controls.Add(this.button1);
             this.Name = "FormInvite";
             this.Text = "FormInvite";
@@ -56,5 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAide;
     }
 }
