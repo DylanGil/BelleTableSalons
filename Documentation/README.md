@@ -5,6 +5,6 @@ document2_Client.pdf -> information sur le client
 document3_devis.pdf -> le devis
 document4_contenuesql.pdf -> image de la base de données
 
-Pour récupérer la base de données en local aller dans le dossier ../BDD et récupéré le dossier BelleTableDesktop.sql
+Pour récupérer la base de données en local aller dans le dossier ../BDD et récupéré dans le dossier cppe.sql
 
 
