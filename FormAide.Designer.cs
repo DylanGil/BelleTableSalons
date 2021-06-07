@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAide));
             this.rbEvolution = new System.Windows.Forms.RadioButton();
             this.rbDysfonctionnement = new System.Windows.Forms.RadioButton();
             this.labelCommentaire = new System.Windows.Forms.Label();
@@ -117,7 +118,9 @@
             this.Controls.Add(this.rbDysfonctionnement);
             this.Controls.Add(this.labelCommentaire);
             this.Controls.Add(this.buttonOk);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAide";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAide";
             this.ResumeLayout(false);
             this.PerformLayout();

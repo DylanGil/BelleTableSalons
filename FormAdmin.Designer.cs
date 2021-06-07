@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
             this.dtLog = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPages = new System.Windows.Forms.TabControl();
@@ -36,9 +37,12 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgEchec = new System.Windows.Forms.DataGridView();
-            this.buttonAddUser = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgRemarques = new System.Windows.Forms.DataGridView();
+            this.buttonAddUser = new System.Windows.Forms.Button();
+            this.buttonAddSalon = new System.Windows.Forms.Button();
+            this.indexSalons = new System.Windows.Forms.TabPage();
+            this.dtSalons = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dtLog)).BeginInit();
             this.tabPages.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -48,6 +52,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgEchec)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgRemarques)).BeginInit();
+            this.indexSalons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtSalons)).BeginInit();
             this.SuspendLayout();
             // 
             // dtLog
@@ -75,6 +81,7 @@
             this.tabPages.Controls.Add(this.tabPage1);
             this.tabPages.Controls.Add(this.tabPage2);
             this.tabPages.Controls.Add(this.tabPage4);
+            this.tabPages.Controls.Add(this.indexSalons);
             this.tabPages.Location = new System.Drawing.Point(12, 41);
             this.tabPages.Name = "tabPages";
             this.tabPages.SelectedIndex = 0;
@@ -131,16 +138,6 @@
             this.dgEchec.Size = new System.Drawing.Size(719, 295);
             this.dgEchec.TabIndex = 3;
             // 
-            // buttonAddUser
-            // 
-            this.buttonAddUser.Location = new System.Drawing.Point(485, 12);
-            this.buttonAddUser.Name = "buttonAddUser";
-            this.buttonAddUser.Size = new System.Drawing.Size(124, 23);
-            this.buttonAddUser.TabIndex = 3;
-            this.buttonAddUser.Text = "Ajouter un utilisateur";
-            this.buttonAddUser.UseVisualStyleBackColor = true;
-            this.buttonAddUser.Click += new System.EventHandler(this.buttonAddUser_Click);
-            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.dgRemarques);
@@ -160,15 +157,58 @@
             this.dgRemarques.Size = new System.Drawing.Size(719, 295);
             this.dgRemarques.TabIndex = 4;
             // 
+            // buttonAddUser
+            // 
+            this.buttonAddUser.Location = new System.Drawing.Point(485, 12);
+            this.buttonAddUser.Name = "buttonAddUser";
+            this.buttonAddUser.Size = new System.Drawing.Size(124, 23);
+            this.buttonAddUser.TabIndex = 3;
+            this.buttonAddUser.Text = "Ajouter un utilisateur";
+            this.buttonAddUser.UseVisualStyleBackColor = true;
+            this.buttonAddUser.Click += new System.EventHandler(this.buttonAddUser_Click);
+            // 
+            // buttonAddSalon
+            // 
+            this.buttonAddSalon.Location = new System.Drawing.Point(144, 12);
+            this.buttonAddSalon.Name = "buttonAddSalon";
+            this.buttonAddSalon.Size = new System.Drawing.Size(124, 23);
+            this.buttonAddSalon.TabIndex = 4;
+            this.buttonAddSalon.Text = "Créer un salon";
+            this.buttonAddSalon.UseVisualStyleBackColor = true;
+            this.buttonAddSalon.Click += new System.EventHandler(this.buttonAddSalon_Click);
+            // 
+            // indexSalons
+            // 
+            this.indexSalons.Controls.Add(this.dtSalons);
+            this.indexSalons.Location = new System.Drawing.Point(4, 22);
+            this.indexSalons.Name = "indexSalons";
+            this.indexSalons.Size = new System.Drawing.Size(777, 309);
+            this.indexSalons.TabIndex = 3;
+            this.indexSalons.Text = "Salons";
+            this.indexSalons.UseVisualStyleBackColor = true;
+            // 
+            // dtSalons
+            // 
+            this.dtSalons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtSalons.Location = new System.Drawing.Point(0, 0);
+            this.dtSalons.Name = "dtSalons";
+            this.dtSalons.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtSalons.Size = new System.Drawing.Size(776, 309);
+            this.dtSalons.TabIndex = 2;
+            this.dtSalons.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtSalons_CellDoubleClick);
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 388);
+            this.Controls.Add(this.buttonAddSalon);
             this.Controls.Add(this.buttonAddUser);
             this.Controls.Add(this.tabPages);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAdmin";
             ((System.ComponentModel.ISupportInitialize)(this.dtLog)).EndInit();
             this.tabPages.ResumeLayout(false);
@@ -179,6 +219,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgEchec)).EndInit();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgRemarques)).EndInit();
+            this.indexSalons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtSalons)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,5 +238,8 @@
         private System.Windows.Forms.Button buttonAddUser;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridView dgRemarques;
+        private System.Windows.Forms.Button buttonAddSalon;
+        private System.Windows.Forms.TabPage indexSalons;
+        private System.Windows.Forms.DataGridView dtSalons;
     }
 }

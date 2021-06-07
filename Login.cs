@@ -15,7 +15,9 @@ namespace ppe1
 {
     public partial class Login : Form
     {
-        string _connexionString = "server = localhost; user id = root;database=cppe";
+        //string _connexionString = "server = localhost; user id = root;database=cppe";
+        string _connexionString = ConnectSQL.GiveLocalConnection();
+        
         public int idUtilisateur = 0;
         public string nomUtilisateur = "";
         public string prenomUtilisateur = "";
@@ -67,6 +69,8 @@ namespace ppe1
                     infoUser.Nom = rdr[1].ToString();
                     infoUser.Prenom = rdr[2].ToString();
                     infoUser.Password = safePassword;
+                    infoUser.Email = rdr[5].ToString();
+                    infoUser.Departement = rdr[6].ToString();
 
                     this.DialogResult = DialogResult.OK;
                 }

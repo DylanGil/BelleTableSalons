@@ -20,40 +20,22 @@ namespace ppe1
         {
             InitializeComponent();
         }
-        /*public ChangeUser(string nom, string prenom, int role)
-        {
-            InitializeComponent();
-            tbNom.Text = nom;
-            tbPrenom.Text = prenom;
-            switch (role)
-            {
-                case 0:
-                    rbInvite.Checked = true;
-                    break;
-                case 1:
-                    rbUtilisateur.Checked = true;
-                    break;
-                case 2:
-                    rbAdmin.Checked = true;
-                    break;
-            }
-
-        }*/
-
-        public ChangeUser(InfoUser infoUserr) //peut etre interressant a utiliser, mais faut voir si infoUser
+        public ChangeUser(InfoUser infoUserr)
         {
             InitializeComponent();
             infoUser = infoUserr;
             tbNom.Text = infoUser.Nom;
             tbPrenom.Text = infoUser.Prenom;
             tbChangeMdp.Text = infoUser.Password;
+            tbEmail.Text = infoUser.Email;
+            tbDpt.Text = infoUser.Departement;
             switch (infoUser.Role)
             {
                 case 0:
                     rbInvite.Checked = true;
                     break;
                 case 1:
-                    rbUtilisateur.Checked = true;
+                    rbOperateur.Checked = true;
                     break;
                 case 2:
                     rbAdmin.Checked = true;
@@ -111,11 +93,11 @@ namespace ppe1
             int rbSelected = 0;
             if (rbAdmin.Checked == true)
                 rbSelected = 2;
-            if (rbUtilisateur.Checked == true)
+            if (rbOperateur.Checked == true)
                 rbSelected = 1;
             if (rbInvite.Checked == true)
                 rbSelected = 0;
-            MessageBox.Show(infoUser.Save("modification", tbNom.Text, tbPrenom.Text, tbChangeMdp.Text, rbSelected, infoUser.Id));
+            MessageBox.Show(infoUser.Save("modification", tbNom.Text, tbPrenom.Text, tbChangeMdp.Text, rbSelected, infoUser.Id, tbEmail.Text, tbDpt.Text));
             this.DialogResult = DialogResult.OK;
         }
     }

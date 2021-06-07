@@ -15,6 +15,8 @@ namespace ppe1
         private string _nom;
         private string _prenom;
         private string _password;
+        private string _email;
+        private string _departement;
 
         public int Id
         {
@@ -65,7 +67,29 @@ namespace ppe1
                     _password = value;
             }
         }
-        public string Save(string choix, string newNom, string newPrenom, string newPassword, int newRole, int hisId)
+        public string Email
+        {
+            get => _email;
+            set
+            {
+                if (value is string)
+                    _email = value;
+            }
+        }
+        public string Departement
+        {
+            get => _departement;
+            set
+            {
+                if (value is string)
+                    _departement = value;
+            }
+        }
+
+
+
+
+        public string Save(string choix, string newNom, string newPrenom, string newPassword, int newRole, int hisId, string newEmail, string newDepartement)
         {
             MySqlConnection conn = new MySqlConnection(_connexionString);
             string safePassword = SHA.petitsha(newPassword);
@@ -89,11 +113,11 @@ namespace ppe1
                     
                             if (bddPassword == newPassword)
                         {
-                            sql = "UPDATE `user` SET `nom`= \"" + newNom + "\",`prenom`=\"" + newPrenom + "\",`role`=" + newRole + " WHERE id =" + hisId;
+                            sql = "UPDATE `user` SET `nom`= \"" + newNom + "\",`prenom`=\"" + newPrenom + "\",`role`=\"" + newRole + "\",`email`=\"" + newEmail + "\",`departement`=\"" + newDepartement + "\" WHERE id =" + hisId;
                         }
                         else
                         {
-                            sql = "UPDATE `user` SET `nom`= \"" + newNom + "\",`prenom`=\"" + newPrenom + "\",`password`=\"" + safePassword + "\",`role`=" + newRole + " WHERE id =" + hisId;
+                            sql = "UPDATE `user` SET `nom`= \"" + newNom + "\",`prenom`=\"" + newPrenom + "\",`password`=\"" + safePassword + "\",`role`=\"" + newRole + "\",`email`=\"" + newEmail + "\",`departement`=\"" + newDepartement + "\" WHERE id =" + hisId;
                         }
                         rdr.Close();
                         MySqlCommand cmd = conn.CreateCommand();
@@ -105,7 +129,7 @@ namespace ppe1
                 catch (Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine(ex);
-                    return "erreur sql";
+                    return "erreur sql UPDATE";
                 }
             }
             else if (choix == "creation")
@@ -125,7 +149,7 @@ namespace ppe1
                     else
                     {
                         rdr1.Close();
-                        string sql = "INSERT INTO user (nom, prenom, password, role) VALUES (\'" + newNom + "\',\'" + newPrenom + "\',\'" + safePassword + "\',\'" + newRole + "\')";
+                        string sql = "INSERT INTO user (nom, prenom, password, role, email, departement) VALUES (\'" + newNom + "\',\'" + newPrenom + "\',\'" + safePassword + "\',\'" + newRole + "\',\'" + newEmail + "\',\'" + newDepartement + "\')";
                         MySqlCommand cmd = new MySqlCommand(sql, conn);
                         MySqlDataReader rdr = cmd.ExecuteReader();//Curseur
                         rdr.Close();
@@ -137,7 +161,7 @@ namespace ppe1
                 catch (Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine(ex);
-                    return "erreur sql";
+                    return "erreur sql INSERT";
                 }
             }
             return "not edit and not add";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelLogin = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
@@ -50,9 +51,9 @@
             this.labelLogin.AutoSize = true;
             this.labelLogin.Location = new System.Drawing.Point(12, 32);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(39, 13);
+            this.labelLogin.Size = new System.Drawing.Size(35, 13);
             this.labelLogin.TabIndex = 10;
-            this.labelLogin.Text = "Login :";
+            this.labelLogin.Text = "Nom :";
             // 
             // buttonLogin
             // 
@@ -102,7 +103,9 @@
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbNom);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Connexion";
             this.ResumeLayout(false);
             this.PerformLayout();

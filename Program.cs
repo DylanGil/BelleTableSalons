@@ -24,17 +24,13 @@ namespace ppe1
             MonFormLogin.ShowDialog();
             if (MonFormLogin.DialogResult == DialogResult.OK)
             {
-               /* int niveauUtilisateur = MonFormLogin.niveauUtilisateur;
-                int idUtilisateur = MonFormLogin.idUtilisateur;
-                string nomUtilisateur = MonFormLogin.nomUtilisateur;
-                string prenomUtilisateur = MonFormLogin.prenomUtilisateur;*/
                 logSql(infoUser.Role, infoUser.Id, infoUser.Nom, infoUser.Prenom, "connection");
                 MonFormLogin.Close();
                 switch (infoUser.Role)
                 {
                     case 1:
-                        //MessageBox.Show("Tu est un Utilisateur");
-                        Application.Run(new FormUtilisateur(infoUser));
+                        //MessageBox.Show("Tu est un Opérateur");
+                        Application.Run(new FormOperateur(infoUser));
                         break;
                     case 2:
                         //MessageBox.Show("Tu est un Admin");

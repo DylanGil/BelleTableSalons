@@ -81,6 +81,7 @@
             this.Controls.Add(this.buttonUtilisateur);
             this.Controls.Add(this.buttonAdmin);
             this.Name = "RoleButtons";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vos Boutons";
             this.Load += new System.EventHandler(this.RoleButtons_Load);
             this.ResumeLayout(false);
