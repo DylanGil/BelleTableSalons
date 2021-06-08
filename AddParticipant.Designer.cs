@@ -40,6 +40,10 @@
             this.nomLabel = new System.Windows.Forms.Label();
             this.tbNom = new System.Windows.Forms.TextBox();
             this.buttonSuppParticipant = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbBadge = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBadge)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -81,9 +85,10 @@
             // buttonPDF
             // 
             this.buttonPDF.BackColor = System.Drawing.Color.MintCream;
-            this.buttonPDF.Location = new System.Drawing.Point(188, 311);
+            this.buttonPDF.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonPDF.Location = new System.Drawing.Point(168, 314);
             this.buttonPDF.Name = "buttonPDF";
-            this.buttonPDF.Size = new System.Drawing.Size(127, 27);
+            this.buttonPDF.Size = new System.Drawing.Size(172, 27);
             this.buttonPDF.TabIndex = 6;
             this.buttonPDF.Text = "Generer un badge";
             this.buttonPDF.UseVisualStyleBackColor = false;
@@ -149,12 +154,32 @@
             this.buttonSuppParticipant.Visible = false;
             this.buttonSuppParticipant.Click += new System.EventHandler(this.buttonSuppParticipant_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(-23, -46);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 49;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pbBadge
+            // 
+            this.pbBadge.Image = ((System.Drawing.Image)(resources.GetObject("pbBadge.Image")));
+            this.pbBadge.Location = new System.Drawing.Point(303, 316);
+            this.pbBadge.Name = "pbBadge";
+            this.pbBadge.Size = new System.Drawing.Size(27, 22);
+            this.pbBadge.TabIndex = 50;
+            this.pbBadge.TabStop = false;
+            this.pbBadge.Visible = false;
+            // 
             // AddParticipant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(499, 378);
+            this.Controls.Add(this.pbBadge);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonSuppParticipant);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbDpt);
@@ -170,6 +195,8 @@
             this.Name = "AddParticipant";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddParticipant";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBadge)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,5 +215,7 @@
         private System.Windows.Forms.Label nomLabel;
         private System.Windows.Forms.TextBox tbNom;
         private System.Windows.Forms.Button buttonSuppParticipant;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbBadge;
     }
 }

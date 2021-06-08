@@ -118,6 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pbBadge.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        sQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFWSURBVEhL5dU/
+        LwRBGMfxFUS0EhKlxivQUItGaL0BCToSiVKlUKBQ6STiRfgThVpFr6BRIBEREQXf796ubCaza/eyjfgl
+        n5id2X2eM3c3l/ybTOMEZxnHzrWWfbwib+DYudZisZvOMI3j2g1GsIfiFoTuEDZwLnavrGXNYSTneELs
+        xlzTBnrO/iafWHVQEbfjARsZx79tkTWtnXxh2UFFXPcVFS2hKj5j7dIG7t9YZ9hVKhuswH/PtSP0oGlK
+        G/ThDcdYh+uTaJrSBv0IG0yhaUobDOIazusD4XuxjauISwzBlDbYxTv8lMzhFj5cfB8WcBBh4wGYaAP3
+        /wVb6VUnM/CeifSqfqINxuH1IfIv1WY2twgzj3wtZJ1emGiDUdwj/FI9YhbmAuF6zmc920y0QZv5aVDn
+        LOoma0jPouLJ1yZrniI9c/xoVv0eNGWtHaS/B385SfINgHqsgs3nhpgAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEBLAEsAAD/4QCURXhpZgAATU0AKgAAAAgAAwEOAAIAAABMAAAAMgESAAMAAAAB

@@ -27,6 +27,7 @@ namespace ppe1
         {
             InitializeComponent();
             buttonPDF.Visible = true;
+            pbBadge.Visible = true;
             addButton.Text = "Modifier";
             buttonSuppParticipant.Visible = true;
             idParticipant = idParticipantt;

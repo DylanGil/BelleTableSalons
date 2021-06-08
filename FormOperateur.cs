@@ -26,15 +26,16 @@ namespace ppe1
             infoUser = infoUserr;
 
             //dataGridSalons
-            this.dtSalons.ColumnCount = 4; //5
+            this.dtSalons.ColumnCount = 5;
             dtSalons.Columns[1].Width = 200;
             dtSalons.Columns[2].Width = 150;
+            dtSalons.Columns[4].Width = 120;
             dtSalons.Columns[2].DefaultCellStyle.Format = "yyyy-MM-dd";
             dtSalons.Columns[0].Name = "Id";
             dtSalons.Columns[1].Name = "Libelle";
             dtSalons.Columns[2].Name = "Date";
             dtSalons.Columns[3].Name = "Lieu";
-            //dtSalons.Columns[4].Name = "NbParticipants"; // A FAIRE
+            dtSalons.Columns[4].Name = "NombreParticipants";
             checkSalons();
         }
 
@@ -50,16 +51,15 @@ namespace ppe1
             {
                 dtSalons.Rows.Clear();
                 conn.Open();
-                string sql = "SELECT * FROM salons ORDER BY date ASC";
+                string sql = "SELECT salons.id, libelle, date, lieu, COUNT(idsalon) FROM participants,salons WHERE participants.idsalon = salons.id GROUP BY idsalon";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();//Curseur
 
-                
                 if (rdr.HasRows)
                 {
                     while (rdr.Read())
                     {
-                        dtSalons.Rows.Add(rdr[0], rdr[1], rdr[2], rdr[3]);
+                        dtSalons.Rows.Add(rdr[0], rdr[1], rdr[2], rdr[3], rdr[4]);
                     }
                 }
                 else
