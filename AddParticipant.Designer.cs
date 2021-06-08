@@ -45,9 +45,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(77, 141);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(39, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.Size = new System.Drawing.Size(128, 24);
             this.label2.TabIndex = 47;
             this.label2.Text = "Departement :";
             // 
@@ -61,9 +63,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(114, 188);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(100, 184);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(67, 24);
             this.label1.TabIndex = 46;
             this.label1.Text = "Email :";
             // 
@@ -76,21 +80,24 @@
             // 
             // buttonPDF
             // 
+            this.buttonPDF.BackColor = System.Drawing.Color.MintCream;
             this.buttonPDF.Location = new System.Drawing.Point(188, 311);
             this.buttonPDF.Name = "buttonPDF";
-            this.buttonPDF.Size = new System.Drawing.Size(127, 23);
+            this.buttonPDF.Size = new System.Drawing.Size(127, 27);
             this.buttonPDF.TabIndex = 6;
             this.buttonPDF.Text = "Generer un badge";
-            this.buttonPDF.UseVisualStyleBackColor = true;
+            this.buttonPDF.UseVisualStyleBackColor = false;
             this.buttonPDF.Visible = false;
             this.buttonPDF.Click += new System.EventHandler(this.buttonPDF_Click);
             // 
             // labelPrenom
             // 
             this.labelPrenom.AutoSize = true;
-            this.labelPrenom.Location = new System.Drawing.Point(102, 98);
+            this.labelPrenom.BackColor = System.Drawing.Color.Transparent;
+            this.labelPrenom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrenom.Location = new System.Drawing.Point(80, 91);
             this.labelPrenom.Name = "labelPrenom";
-            this.labelPrenom.Size = new System.Drawing.Size(49, 13);
+            this.labelPrenom.Size = new System.Drawing.Size(87, 24);
             this.labelPrenom.TabIndex = 44;
             this.labelPrenom.Text = "Prenom :";
             // 
@@ -103,20 +110,23 @@
             // 
             // addButton
             // 
+            this.addButton.BackColor = System.Drawing.Color.MintCream;
             this.addButton.Location = new System.Drawing.Point(258, 263);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.Size = new System.Drawing.Size(97, 28);
             this.addButton.TabIndex = 5;
             this.addButton.Text = "Ajouter";
-            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // nomLabel
             // 
             this.nomLabel.AutoSize = true;
-            this.nomLabel.Location = new System.Drawing.Point(116, 50);
+            this.nomLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomLabel.Location = new System.Drawing.Point(106, 50);
             this.nomLabel.Name = "nomLabel";
-            this.nomLabel.Size = new System.Drawing.Size(35, 13);
+            this.nomLabel.Size = new System.Drawing.Size(61, 24);
             this.nomLabel.TabIndex = 41;
             this.nomLabel.Text = "Nom :";
             // 
@@ -129,12 +139,13 @@
             // 
             // buttonSuppParticipant
             // 
-            this.buttonSuppParticipant.Location = new System.Drawing.Point(177, 263);
+            this.buttonSuppParticipant.BackColor = System.Drawing.Color.MintCream;
+            this.buttonSuppParticipant.Location = new System.Drawing.Point(155, 263);
             this.buttonSuppParticipant.Name = "buttonSuppParticipant";
-            this.buttonSuppParticipant.Size = new System.Drawing.Size(75, 23);
+            this.buttonSuppParticipant.Size = new System.Drawing.Size(97, 28);
             this.buttonSuppParticipant.TabIndex = 48;
             this.buttonSuppParticipant.Text = "Supprimer";
-            this.buttonSuppParticipant.UseVisualStyleBackColor = true;
+            this.buttonSuppParticipant.UseVisualStyleBackColor = false;
             this.buttonSuppParticipant.Visible = false;
             this.buttonSuppParticipant.Click += new System.EventHandler(this.buttonSuppParticipant_Click);
             // 
@@ -142,6 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(499, 378);
             this.Controls.Add(this.buttonSuppParticipant);
             this.Controls.Add(this.label2);

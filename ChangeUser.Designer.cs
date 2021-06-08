@@ -50,25 +50,28 @@
             // labelNom
             // 
             this.labelNom.AutoSize = true;
-            this.labelNom.Location = new System.Drawing.Point(73, 15);
+            this.labelNom.BackColor = System.Drawing.Color.Transparent;
+            this.labelNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.labelNom.Location = new System.Drawing.Point(77, 12);
             this.labelNom.Name = "labelNom";
-            this.labelNom.Size = new System.Drawing.Size(35, 13);
+            this.labelNom.Size = new System.Drawing.Size(61, 24);
             this.labelNom.TabIndex = 15;
             this.labelNom.Text = "Nom :";
             // 
             // buttonMAJ
             // 
+            this.buttonMAJ.BackColor = System.Drawing.Color.MintCream;
             this.buttonMAJ.Location = new System.Drawing.Point(233, 201);
             this.buttonMAJ.Name = "buttonMAJ";
             this.buttonMAJ.Size = new System.Drawing.Size(82, 23);
             this.buttonMAJ.TabIndex = 10;
             this.buttonMAJ.Text = "Mettre à jour";
-            this.buttonMAJ.UseVisualStyleBackColor = true;
+            this.buttonMAJ.UseVisualStyleBackColor = false;
             this.buttonMAJ.Click += new System.EventHandler(this.buttonMAJ_Click);
             // 
             // tbNom
             // 
-            this.tbNom.Location = new System.Drawing.Point(117, 12);
+            this.tbNom.Location = new System.Drawing.Point(144, 12);
             this.tbNom.Name = "tbNom";
             this.tbNom.Size = new System.Drawing.Size(198, 20);
             this.tbNom.TabIndex = 1;
@@ -76,15 +79,17 @@
             // labelPrenom
             // 
             this.labelPrenom.AutoSize = true;
-            this.labelPrenom.Location = new System.Drawing.Point(62, 56);
+            this.labelPrenom.BackColor = System.Drawing.Color.Transparent;
+            this.labelPrenom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.labelPrenom.Location = new System.Drawing.Point(51, 50);
             this.labelPrenom.Name = "labelPrenom";
-            this.labelPrenom.Size = new System.Drawing.Size(49, 13);
+            this.labelPrenom.Size = new System.Drawing.Size(87, 24);
             this.labelPrenom.TabIndex = 18;
             this.labelPrenom.Text = "Prenom :";
             // 
             // tbPrenom
             // 
-            this.tbPrenom.Location = new System.Drawing.Point(117, 52);
+            this.tbPrenom.Location = new System.Drawing.Point(144, 52);
             this.tbPrenom.Name = "tbPrenom";
             this.tbPrenom.Size = new System.Drawing.Size(198, 20);
             this.tbPrenom.TabIndex = 2;
@@ -100,46 +105,50 @@
             // rbOperateur
             // 
             this.rbOperateur.AutoSize = true;
+            this.rbOperateur.BackColor = System.Drawing.Color.Transparent;
             this.rbOperateur.Location = new System.Drawing.Point(173, 230);
             this.rbOperateur.Name = "rbOperateur";
             this.rbOperateur.Size = new System.Drawing.Size(72, 17);
             this.rbOperateur.TabIndex = 8;
             this.rbOperateur.Text = "Opérateur";
-            this.rbOperateur.UseVisualStyleBackColor = true;
+            this.rbOperateur.UseVisualStyleBackColor = false;
             // 
             // rbInvite
             // 
             this.rbInvite.AutoSize = true;
+            this.rbInvite.BackColor = System.Drawing.Color.Transparent;
             this.rbInvite.Location = new System.Drawing.Point(264, 230);
             this.rbInvite.Name = "rbInvite";
             this.rbInvite.Size = new System.Drawing.Size(51, 17);
             this.rbInvite.TabIndex = 9;
             this.rbInvite.Text = "Invite";
-            this.rbInvite.UseVisualStyleBackColor = true;
+            this.rbInvite.UseVisualStyleBackColor = false;
             // 
             // rbAdmin
             // 
             this.rbAdmin.AutoSize = true;
+            this.rbAdmin.BackColor = System.Drawing.Color.Transparent;
             this.rbAdmin.Location = new System.Drawing.Point(94, 230);
             this.rbAdmin.Name = "rbAdmin";
             this.rbAdmin.Size = new System.Drawing.Size(54, 17);
             this.rbAdmin.TabIndex = 7;
             this.rbAdmin.Text = "Admin";
-            this.rbAdmin.UseVisualStyleBackColor = true;
+            this.rbAdmin.UseVisualStyleBackColor = false;
             // 
             // buttonChangeMdp
             // 
-            this.buttonChangeMdp.Location = new System.Drawing.Point(382, 53);
+            this.buttonChangeMdp.BackColor = System.Drawing.Color.MintCream;
+            this.buttonChangeMdp.Location = new System.Drawing.Point(420, 52);
             this.buttonChangeMdp.Name = "buttonChangeMdp";
             this.buttonChangeMdp.Size = new System.Drawing.Size(131, 23);
             this.buttonChangeMdp.TabIndex = 5;
             this.buttonChangeMdp.Text = "Modifier le mdp";
-            this.buttonChangeMdp.UseVisualStyleBackColor = true;
+            this.buttonChangeMdp.UseVisualStyleBackColor = false;
             this.buttonChangeMdp.Click += new System.EventHandler(this.buttonChangeMdp_Click);
             // 
             // tbChangeMdp
             // 
-            this.tbChangeMdp.Location = new System.Drawing.Point(519, 53);
+            this.tbChangeMdp.Location = new System.Drawing.Point(557, 52);
             this.tbChangeMdp.Name = "tbChangeMdp";
             this.tbChangeMdp.PasswordChar = '*';
             this.tbChangeMdp.Size = new System.Drawing.Size(198, 20);
@@ -149,15 +158,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 136);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label1.Location = new System.Drawing.Point(10, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.Size = new System.Drawing.Size(128, 24);
             this.label1.TabIndex = 26;
             this.label1.Text = "Département :";
             // 
             // tbDpt
             // 
-            this.tbDpt.Location = new System.Drawing.Point(117, 136);
+            this.tbDpt.Location = new System.Drawing.Point(144, 136);
             this.tbDpt.Name = "tbDpt";
             this.tbDpt.Size = new System.Drawing.Size(198, 20);
             this.tbDpt.TabIndex = 4;
@@ -165,15 +176,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(73, 95);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label2.Location = new System.Drawing.Point(71, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(67, 24);
             this.label2.TabIndex = 28;
             this.label2.Text = "Email :";
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(117, 95);
+            this.tbEmail.Location = new System.Drawing.Point(144, 95);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(198, 20);
             this.tbEmail.TabIndex = 3;
@@ -182,6 +195,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(839, 491);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbEmail);

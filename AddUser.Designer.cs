@@ -47,29 +47,34 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(354, 344);
+            this.addButton.BackColor = System.Drawing.Color.MintCream;
+            this.addButton.Location = new System.Drawing.Point(347, 341);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.Size = new System.Drawing.Size(103, 37);
             this.addButton.TabIndex = 13;
             this.addButton.Text = "Ajouter";
-            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(270, 242);
+            this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
+            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLabel.Location = new System.Drawing.Point(211, 235);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(77, 13);
+            this.passwordLabel.Size = new System.Drawing.Size(133, 24);
             this.passwordLabel.TabIndex = 11;
             this.passwordLabel.Text = "Mot de passe :";
             // 
             // nomLabel
             // 
             this.nomLabel.AutoSize = true;
-            this.nomLabel.Location = new System.Drawing.Point(309, 67);
+            this.nomLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomLabel.Location = new System.Drawing.Point(286, 63);
             this.nomLabel.Name = "nomLabel";
-            this.nomLabel.Size = new System.Drawing.Size(35, 13);
+            this.nomLabel.Size = new System.Drawing.Size(61, 24);
             this.nomLabel.TabIndex = 10;
             this.nomLabel.Text = "Nom :";
             // 
@@ -91,16 +96,18 @@
             // rbAdmin
             // 
             this.rbAdmin.AutoSize = true;
+            this.rbAdmin.BackColor = System.Drawing.Color.Transparent;
             this.rbAdmin.Location = new System.Drawing.Point(290, 288);
             this.rbAdmin.Name = "rbAdmin";
             this.rbAdmin.Size = new System.Drawing.Size(54, 17);
             this.rbAdmin.TabIndex = 6;
             this.rbAdmin.Text = "Admin";
-            this.rbAdmin.UseVisualStyleBackColor = true;
+            this.rbAdmin.UseVisualStyleBackColor = false;
             // 
             // rbInvite
             // 
             this.rbInvite.AutoSize = true;
+            this.rbInvite.BackColor = System.Drawing.Color.Transparent;
             this.rbInvite.Checked = true;
             this.rbInvite.Location = new System.Drawing.Point(460, 288);
             this.rbInvite.Name = "rbInvite";
@@ -108,24 +115,27 @@
             this.rbInvite.TabIndex = 6;
             this.rbInvite.TabStop = true;
             this.rbInvite.Text = "Invite";
-            this.rbInvite.UseVisualStyleBackColor = true;
+            this.rbInvite.UseVisualStyleBackColor = false;
             // 
             // rbOperateur
             // 
             this.rbOperateur.AutoSize = true;
+            this.rbOperateur.BackColor = System.Drawing.Color.Transparent;
             this.rbOperateur.Location = new System.Drawing.Point(369, 288);
             this.rbOperateur.Name = "rbOperateur";
             this.rbOperateur.Size = new System.Drawing.Size(72, 17);
             this.rbOperateur.TabIndex = 5;
             this.rbOperateur.Text = "Opérateur";
-            this.rbOperateur.UseVisualStyleBackColor = true;
+            this.rbOperateur.UseVisualStyleBackColor = false;
             // 
             // labelPrenom
             // 
             this.labelPrenom.AutoSize = true;
-            this.labelPrenom.Location = new System.Drawing.Point(295, 115);
+            this.labelPrenom.BackColor = System.Drawing.Color.Transparent;
+            this.labelPrenom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrenom.Location = new System.Drawing.Point(260, 108);
             this.labelPrenom.Name = "labelPrenom";
-            this.labelPrenom.Size = new System.Drawing.Size(49, 13);
+            this.labelPrenom.Size = new System.Drawing.Size(87, 24);
             this.labelPrenom.TabIndex = 27;
             this.labelPrenom.Text = "Prenom :";
             // 
@@ -139,9 +149,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(306, 155);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(277, 151);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(67, 24);
             this.label1.TabIndex = 30;
             this.label1.Text = "Email :";
             // 
@@ -155,9 +167,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(270, 199);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(216, 195);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.Size = new System.Drawing.Size(128, 24);
             this.label2.TabIndex = 32;
             this.label2.Text = "Departement :";
             // 
@@ -172,6 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbDpt);

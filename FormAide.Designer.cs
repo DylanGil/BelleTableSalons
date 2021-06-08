@@ -41,16 +41,18 @@
             // rbEvolution
             // 
             this.rbEvolution.AutoSize = true;
+            this.rbEvolution.BackColor = System.Drawing.Color.Transparent;
             this.rbEvolution.Location = new System.Drawing.Point(325, 213);
             this.rbEvolution.Name = "rbEvolution";
             this.rbEvolution.Size = new System.Drawing.Size(69, 17);
             this.rbEvolution.TabIndex = 29;
             this.rbEvolution.Text = "Evolution";
-            this.rbEvolution.UseVisualStyleBackColor = true;
+            this.rbEvolution.UseVisualStyleBackColor = false;
             // 
             // rbDysfonctionnement
             // 
             this.rbDysfonctionnement.AutoSize = true;
+            this.rbDysfonctionnement.BackColor = System.Drawing.Color.Transparent;
             this.rbDysfonctionnement.Checked = true;
             this.rbDysfonctionnement.Location = new System.Drawing.Point(161, 213);
             this.rbDysfonctionnement.Name = "rbDysfonctionnement";
@@ -58,30 +60,34 @@
             this.rbDysfonctionnement.TabIndex = 28;
             this.rbDysfonctionnement.TabStop = true;
             this.rbDysfonctionnement.Text = "Dysfonctionnement";
-            this.rbDysfonctionnement.UseVisualStyleBackColor = true;
+            this.rbDysfonctionnement.UseVisualStyleBackColor = false;
             // 
             // labelCommentaire
             // 
             this.labelCommentaire.AutoSize = true;
-            this.labelCommentaire.Location = new System.Drawing.Point(12, 18);
+            this.labelCommentaire.BackColor = System.Drawing.Color.Transparent;
+            this.labelCommentaire.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.labelCommentaire.Location = new System.Drawing.Point(11, 11);
             this.labelCommentaire.Name = "labelCommentaire";
-            this.labelCommentaire.Size = new System.Drawing.Size(77, 13);
+            this.labelCommentaire.Size = new System.Drawing.Size(138, 24);
             this.labelCommentaire.TabIndex = 27;
             this.labelCommentaire.Text = "Commentaire : ";
             // 
             // buttonOk
             // 
+            this.buttonOk.BackColor = System.Drawing.Color.MintCream;
             this.buttonOk.Location = new System.Drawing.Point(274, 278);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(82, 23);
             this.buttonOk.TabIndex = 24;
             this.buttonOk.Text = "Ok";
-            this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.UseVisualStyleBackColor = false;
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // labelType
             // 
             this.labelType.AutoSize = true;
+            this.labelType.BackColor = System.Drawing.Color.Transparent;
             this.labelType.Location = new System.Drawing.Point(12, 213);
             this.labelType.Name = "labelType";
             this.labelType.Size = new System.Drawing.Size(102, 13);
@@ -90,7 +96,7 @@
             // 
             // rtbCommentaire
             // 
-            this.rtbCommentaire.Location = new System.Drawing.Point(15, 34);
+            this.rtbCommentaire.Location = new System.Drawing.Point(15, 39);
             this.rtbCommentaire.Name = "rtbCommentaire";
             this.rtbCommentaire.Size = new System.Drawing.Size(455, 150);
             this.rtbCommentaire.TabIndex = 31;
@@ -98,18 +104,20 @@
             // 
             // buttonCancel
             // 
+            this.buttonCancel.BackColor = System.Drawing.Color.MintCream;
             this.buttonCancel.Location = new System.Drawing.Point(114, 278);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(82, 23);
             this.buttonCancel.TabIndex = 32;
             this.buttonCancel.Text = "Annuler";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // FormAide
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(495, 354);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.rtbCommentaire);

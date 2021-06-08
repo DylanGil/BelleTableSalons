@@ -76,7 +76,7 @@ namespace ppe1
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bonjour " + infoUser.Nom + " " + infoUser.Prenom + "\nVous êtes un : Admin\nVotre ID est : " + infoUser.Id);
+            MessageBox.Show("Bonjour ");// + infoUser.Nom + " " + infoUser.Prenom + "\nVous êtes un : Admin\nVotre ID est : " + infoUser.Id);
         }
 
         private void checkUser()

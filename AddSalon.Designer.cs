@@ -38,8 +38,8 @@
             this.tbDateSalon = new System.Windows.Forms.DateTimePicker();
             this.tabPages = new System.Windows.Forms.TabControl();
             this.indexParticipants = new System.Windows.Forms.TabPage();
-            this.dtParticipants = new System.Windows.Forms.DataGridView();
             this.addParticipantButton = new System.Windows.Forms.Button();
+            this.dtParticipants = new System.Windows.Forms.DataGridView();
             this.tabPages.SuspendLayout();
             this.indexParticipants.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtParticipants)).BeginInit();
@@ -48,9 +48,11 @@
             // labelPrenom
             // 
             this.labelPrenom.AutoSize = true;
-            this.labelPrenom.Location = new System.Drawing.Point(316, 101);
+            this.labelPrenom.BackColor = System.Drawing.Color.Transparent;
+            this.labelPrenom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrenom.Location = new System.Drawing.Point(318, 101);
             this.labelPrenom.Name = "labelPrenom";
-            this.labelPrenom.Size = new System.Drawing.Size(33, 13);
+            this.labelPrenom.Size = new System.Drawing.Size(56, 24);
             this.labelPrenom.TabIndex = 38;
             this.labelPrenom.Text = "Lieu :";
             // 
@@ -63,29 +65,34 @@
             // 
             // addButton
             // 
+            this.addButton.BackColor = System.Drawing.Color.MintCream;
             this.addButton.Location = new System.Drawing.Point(430, 224);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 37;
             this.addButton.Text = "Ajouter";
-            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(314, 148);
+            this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
+            this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLabel.Location = new System.Drawing.Point(316, 146);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(36, 13);
+            this.passwordLabel.Size = new System.Drawing.Size(58, 24);
             this.passwordLabel.TabIndex = 36;
             this.passwordLabel.Text = "Date :";
             // 
             // nomLabel
             // 
             this.nomLabel.AutoSize = true;
-            this.nomLabel.Location = new System.Drawing.Point(316, 56);
+            this.nomLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomLabel.Location = new System.Drawing.Point(299, 56);
             this.nomLabel.Name = "nomLabel";
-            this.nomLabel.Size = new System.Drawing.Size(43, 13);
+            this.nomLabel.Size = new System.Drawing.Size(75, 24);
             this.nomLabel.TabIndex = 35;
             this.nomLabel.Text = "Libelle :";
             // 
@@ -114,6 +121,7 @@
             // 
             // indexParticipants
             // 
+            this.indexParticipants.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("indexParticipants.BackgroundImage")));
             this.indexParticipants.Controls.Add(this.addParticipantButton);
             this.indexParticipants.Controls.Add(this.dtParticipants);
             this.indexParticipants.Location = new System.Drawing.Point(4, 22);
@@ -122,6 +130,17 @@
             this.indexParticipants.TabIndex = 2;
             this.indexParticipants.Text = "Participants";
             this.indexParticipants.UseVisualStyleBackColor = true;
+            // 
+            // addParticipantButton
+            // 
+            this.addParticipantButton.BackColor = System.Drawing.Color.MintCream;
+            this.addParticipantButton.Location = new System.Drawing.Point(3, 3);
+            this.addParticipantButton.Name = "addParticipantButton";
+            this.addParticipantButton.Size = new System.Drawing.Size(128, 23);
+            this.addParticipantButton.TabIndex = 41;
+            this.addParticipantButton.Text = "Ajouter un participant";
+            this.addParticipantButton.UseVisualStyleBackColor = false;
+            this.addParticipantButton.Click += new System.EventHandler(this.addParticipantButton_Click);
             // 
             // dtParticipants
             // 
@@ -133,20 +152,11 @@
             this.dtParticipants.TabIndex = 1;
             this.dtParticipants.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtParticipants_CellDoubleClick);
             // 
-            // addParticipantButton
-            // 
-            this.addParticipantButton.Location = new System.Drawing.Point(3, 3);
-            this.addParticipantButton.Name = "addParticipantButton";
-            this.addParticipantButton.Size = new System.Drawing.Size(128, 23);
-            this.addParticipantButton.TabIndex = 41;
-            this.addParticipantButton.Text = "Ajouter un participant";
-            this.addParticipantButton.UseVisualStyleBackColor = true;
-            this.addParticipantButton.Click += new System.EventHandler(this.addParticipantButton_Click);
-            // 
             // AddSalon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(979, 601);
             this.Controls.Add(this.tabPages);
             this.Controls.Add(this.tbDateSalon);

@@ -54,6 +54,7 @@ namespace ppe1
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();//Curseur
 
+                
                 if (rdr.HasRows)
                 {
                     while (rdr.Read())

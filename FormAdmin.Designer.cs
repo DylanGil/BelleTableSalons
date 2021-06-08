@@ -39,10 +39,10 @@
             this.dgEchec = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgRemarques = new System.Windows.Forms.DataGridView();
-            this.buttonAddUser = new System.Windows.Forms.Button();
-            this.buttonAddSalon = new System.Windows.Forms.Button();
             this.indexSalons = new System.Windows.Forms.TabPage();
             this.dtSalons = new System.Windows.Forms.DataGridView();
+            this.buttonAddUser = new System.Windows.Forms.Button();
+            this.buttonAddSalon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtLog)).BeginInit();
             this.tabPages.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -67,12 +67,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(317, 12);
+            this.button1.Location = new System.Drawing.Point(672, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "Vos informations";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabPages
@@ -135,7 +136,7 @@
             this.dgEchec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgEchec.Location = new System.Drawing.Point(0, 0);
             this.dgEchec.Name = "dgEchec";
-            this.dgEchec.Size = new System.Drawing.Size(719, 295);
+            this.dgEchec.Size = new System.Drawing.Size(774, 309);
             this.dgEchec.TabIndex = 3;
             // 
             // tabPage4
@@ -154,28 +155,8 @@
             this.dgRemarques.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgRemarques.Location = new System.Drawing.Point(2, 0);
             this.dgRemarques.Name = "dgRemarques";
-            this.dgRemarques.Size = new System.Drawing.Size(719, 295);
+            this.dgRemarques.Size = new System.Drawing.Size(772, 309);
             this.dgRemarques.TabIndex = 4;
-            // 
-            // buttonAddUser
-            // 
-            this.buttonAddUser.Location = new System.Drawing.Point(485, 12);
-            this.buttonAddUser.Name = "buttonAddUser";
-            this.buttonAddUser.Size = new System.Drawing.Size(124, 23);
-            this.buttonAddUser.TabIndex = 3;
-            this.buttonAddUser.Text = "Ajouter un utilisateur";
-            this.buttonAddUser.UseVisualStyleBackColor = true;
-            this.buttonAddUser.Click += new System.EventHandler(this.buttonAddUser_Click);
-            // 
-            // buttonAddSalon
-            // 
-            this.buttonAddSalon.Location = new System.Drawing.Point(144, 12);
-            this.buttonAddSalon.Name = "buttonAddSalon";
-            this.buttonAddSalon.Size = new System.Drawing.Size(124, 23);
-            this.buttonAddSalon.TabIndex = 4;
-            this.buttonAddSalon.Text = "Créer un salon";
-            this.buttonAddSalon.UseVisualStyleBackColor = true;
-            this.buttonAddSalon.Click += new System.EventHandler(this.buttonAddSalon_Click);
             // 
             // indexSalons
             // 
@@ -197,11 +178,35 @@
             this.dtSalons.TabIndex = 2;
             this.dtSalons.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtSalons_CellDoubleClick);
             // 
+            // buttonAddUser
+            // 
+            this.buttonAddUser.BackColor = System.Drawing.Color.MintCream;
+            this.buttonAddUser.Location = new System.Drawing.Point(436, 12);
+            this.buttonAddUser.Name = "buttonAddUser";
+            this.buttonAddUser.Size = new System.Drawing.Size(130, 30);
+            this.buttonAddUser.TabIndex = 3;
+            this.buttonAddUser.Text = "Ajouter un utilisateur";
+            this.buttonAddUser.UseVisualStyleBackColor = false;
+            this.buttonAddUser.Click += new System.EventHandler(this.buttonAddUser_Click);
+            // 
+            // buttonAddSalon
+            // 
+            this.buttonAddSalon.BackColor = System.Drawing.Color.MintCream;
+            this.buttonAddSalon.ForeColor = System.Drawing.Color.Black;
+            this.buttonAddSalon.Location = new System.Drawing.Point(265, 12);
+            this.buttonAddSalon.Name = "buttonAddSalon";
+            this.buttonAddSalon.Size = new System.Drawing.Size(130, 30);
+            this.buttonAddSalon.TabIndex = 4;
+            this.buttonAddSalon.Text = "Créer un salon";
+            this.buttonAddSalon.UseVisualStyleBackColor = false;
+            this.buttonAddSalon.Click += new System.EventHandler(this.buttonAddSalon_Click);
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 388);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(808, 387);
             this.Controls.Add(this.buttonAddSalon);
             this.Controls.Add(this.buttonAddUser);
             this.Controls.Add(this.tabPages);

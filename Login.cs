@@ -57,7 +57,7 @@ namespace ppe1
                 {
                     while (rdr.Read())
                     {
-                        MessageBox.Show("Bonjour " + rdr[1] + " " + rdr[2] + "\nRôle : " +rdr[4]);
+                        MessageBox.Show("Bonjour ");// + rdr[1] + " " + rdr[2] + "\nRôle : " +rdr[4]);
                     }
                     
                     this.niveauUtilisateur = Convert.ToInt32(rdr[4]);
@@ -114,6 +114,45 @@ namespace ppe1
                 buttonLogin.PerformClick();
                 e.Handled = true;
             }
+        }
+
+        private void tbNom_Enter(object sender, EventArgs e)
+        {
+            if(tbNom.Text == "Nom")
+            {
+                tbNom.Text = "";
+                tbNom.ForeColor = Color.Black;
+            }
+        }
+
+        private void tbNom_Leave(object sender, EventArgs e)
+        {
+            if (tbNom.Text == "")
+            {
+                tbNom.Text = "Nom";
+                tbNom.ForeColor = Color.Silver;
+            }
+
+        }
+
+        private void tbPassword_Enter(object sender, EventArgs e)
+        {
+            if (tbPassword.Text == "Password")
+            {
+                tbPassword.Text = "";
+                tbPassword.ForeColor = Color.Black;
+            }
+
+        }
+
+        private void tbPassword_Leave(object sender, EventArgs e)
+        {
+            if (tbPassword.Text == "")
+            {
+                tbPassword.Text = "Password";
+                tbPassword.ForeColor = Color.Silver;
+            }
+
         }
     }
 }
