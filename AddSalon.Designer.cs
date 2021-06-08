@@ -39,6 +39,7 @@
             this.tabPages = new System.Windows.Forms.TabControl();
             this.indexParticipants = new System.Windows.Forms.TabPage();
             this.dtParticipants = new System.Windows.Forms.DataGridView();
+            this.addParticipantButton = new System.Windows.Forms.Button();
             this.tabPages.SuspendLayout();
             this.indexParticipants.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtParticipants)).BeginInit();
@@ -113,6 +114,7 @@
             // 
             // indexParticipants
             // 
+            this.indexParticipants.Controls.Add(this.addParticipantButton);
             this.indexParticipants.Controls.Add(this.dtParticipants);
             this.indexParticipants.Location = new System.Drawing.Point(4, 22);
             this.indexParticipants.Name = "indexParticipants";
@@ -124,12 +126,22 @@
             // dtParticipants
             // 
             this.dtParticipants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtParticipants.Location = new System.Drawing.Point(1, 0);
+            this.dtParticipants.Location = new System.Drawing.Point(1, 28);
             this.dtParticipants.Name = "dtParticipants";
             this.dtParticipants.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtParticipants.Size = new System.Drawing.Size(943, 272);
+            this.dtParticipants.Size = new System.Drawing.Size(943, 244);
             this.dtParticipants.TabIndex = 1;
             this.dtParticipants.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtParticipants_CellDoubleClick);
+            // 
+            // addParticipantButton
+            // 
+            this.addParticipantButton.Location = new System.Drawing.Point(3, 3);
+            this.addParticipantButton.Name = "addParticipantButton";
+            this.addParticipantButton.Size = new System.Drawing.Size(128, 23);
+            this.addParticipantButton.TabIndex = 41;
+            this.addParticipantButton.Text = "Ajouter un participant";
+            this.addParticipantButton.UseVisualStyleBackColor = true;
+            this.addParticipantButton.Click += new System.EventHandler(this.addParticipantButton_Click);
             // 
             // AddSalon
             // 
@@ -167,5 +179,6 @@
         private System.Windows.Forms.TabControl tabPages;
         private System.Windows.Forms.TabPage indexParticipants;
         private System.Windows.Forms.DataGridView dtParticipants;
+        private System.Windows.Forms.Button addParticipantButton;
     }
 }

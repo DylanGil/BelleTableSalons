@@ -29,7 +29,7 @@ namespace ppe1
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            string _connexionString = "server = localhost; user id = root;database=cppe";
+            string _connexionString = ConnectSQL.GiveLocalConnection();
             string RadioButtonType = "";
             MySqlConnection conn = new MySqlConnection(_connexionString);
             conn.Open();

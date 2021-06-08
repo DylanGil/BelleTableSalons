@@ -33,6 +33,7 @@
             this.tabPages = new System.Windows.Forms.TabControl();
             this.salons = new System.Windows.Forms.TabPage();
             this.dtSalons = new System.Windows.Forms.DataGridView();
+            this.buttonAddSalon = new System.Windows.Forms.Button();
             this.tabPages.SuspendLayout();
             this.salons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtSalons)).BeginInit();
@@ -77,11 +78,22 @@
             this.dtSalons.TabIndex = 1;
             this.dtSalons.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtSalons_CellDoubleClick);
             // 
+            // buttonAddSalon
+            // 
+            this.buttonAddSalon.Location = new System.Drawing.Point(166, 30);
+            this.buttonAddSalon.Name = "buttonAddSalon";
+            this.buttonAddSalon.Size = new System.Drawing.Size(124, 23);
+            this.buttonAddSalon.TabIndex = 5;
+            this.buttonAddSalon.Text = "Créer un salon";
+            this.buttonAddSalon.UseVisualStyleBackColor = true;
+            this.buttonAddSalon.Click += new System.EventHandler(this.buttonAddSalon_Click);
+            // 
             // FormOperateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 460);
+            this.Controls.Add(this.buttonAddSalon);
             this.Controls.Add(this.tabPages);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -101,5 +113,6 @@
         private System.Windows.Forms.TabControl tabPages;
         private System.Windows.Forms.TabPage salons;
         private System.Windows.Forms.DataGridView dtSalons;
+        private System.Windows.Forms.Button buttonAddSalon;
     }
 }

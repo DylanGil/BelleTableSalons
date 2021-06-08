@@ -17,6 +17,7 @@ namespace ppe1
     {
         string addOrEdit = "";
         string idSalon = "";
+        string libelleSalon = "";
         string _connexionString = ConnectSQL.GiveLocalConnection();
         public AddSalon()
         {
@@ -25,13 +26,14 @@ namespace ppe1
             addOrEdit = "add";
         }
 
-        public AddSalon(string idSalonn, string libelleSalon, DateTime dateSalon, string lieuSalon)
+        public AddSalon(string idSalonn, string libelleSalonn, DateTime dateSalon, string lieuSalon)
         {
             //modification d'un salon
             InitializeComponent();
             addButton.Text = "Modifier";
             addOrEdit = "edit";
             idSalon = idSalonn;
+            libelleSalon = libelleSalonn;
             tbLibelle.Text = libelleSalon;
             tbLieu.Text = lieuSalon;
             tbDateSalon.Value = dateSalon;
@@ -53,22 +55,20 @@ namespace ppe1
             MySqlConnection conn = new MySqlConnection(_connexionString);
             try
             {
+                conn.Open();
+                string sql = "";
                 if (addOrEdit == "add")
                 {
-                    conn.Open();
-                    string sql = "INSERT INTO `salons` (`libelle`, `date`, `lieu`) VALUES ('" + tbLibelle.Text + "', '" + tbDateSalon.Value.ToString("yyyy-MM-dd") + "', '" + tbLieu.Text + "');";
-                    MySqlCommand cmd = conn.CreateCommand();
-                    cmd.CommandText = sql;
-                    cmd.ExecuteNonQuery();
+                    sql = "INSERT INTO `salons` (`libelle`, `date`, `lieu`) VALUES ('" + tbLibelle.Text + "', '" + tbDateSalon.Value.ToString("yyyy-MM-dd") + "', '" + tbLieu.Text + "');";
                 }
                 else if(addOrEdit == "edit")
                 {
-                    conn.Open();
-                    string sql = "UPDATE `salons` SET `libelle` = '" + tbLibelle.Text + "', `date` = '" + tbDateSalon.Value.ToString("yyyy-MM-dd") + "', `lieu` = '" + tbLieu.Text + "' WHERE `id` = " + idSalon +";";
-                    MySqlCommand cmd = conn.CreateCommand();
-                    cmd.CommandText = sql;
-                    cmd.ExecuteNonQuery();
+                    sql = "UPDATE `salons` SET `libelle` = '" + tbLibelle.Text + "', `date` = '" + tbDateSalon.Value.ToString("yyyy-MM-dd") + "', `lieu` = '" + tbLieu.Text + "' WHERE `id` = " + idSalon +";";
+                    
                 }
+                MySqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
                 MessageBox.Show("Création/Modification éffectué");
             }
             catch (Exception ex)
@@ -91,6 +91,7 @@ namespace ppe1
 
                 if (rdr.HasRows)
                 {
+                    dtParticipants.Rows.Clear();
                     while (rdr.Read())
                     {
                         dtParticipants.Rows.Add(rdr[0], rdr[1], rdr[2], rdr[3], rdr[4]);
@@ -114,15 +115,23 @@ namespace ppe1
 
             if (e.RowIndex > -1)
             {
+                string idParticipant = this.dtParticipants.CurrentRow.Cells[0].Value.ToString();
                 string nom = this.dtParticipants.CurrentRow.Cells[1].Value.ToString();
                 string prenom = this.dtParticipants.CurrentRow.Cells[2].Value.ToString();
                 string departement = this.dtParticipants.CurrentRow.Cells[3].Value.ToString();
                 string email = this.dtParticipants.CurrentRow.Cells[4].Value.ToString();
 
-                AddParticipant unParticipant = new AddParticipant(nom, prenom, departement, email);
+                AddParticipant unParticipant = new AddParticipant(idParticipant, nom, prenom, departement, email, idSalon, libelleSalon);
                 unParticipant.ShowDialog();
-                //checkSalons();
+                checkParticipants();
             }
+        }
+
+        private void addParticipantButton_Click(object sender, EventArgs e)
+        {
+            AddParticipant unParticipant = new AddParticipant(idSalon);
+            unParticipant.ShowDialog();
+            checkParticipants();
         }
     }
 }

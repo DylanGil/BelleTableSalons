@@ -15,7 +15,7 @@ namespace ppe1
 {
     public partial class FormAdmin : Form
     {
-        string _connexionString = "server = localhost; user id = root;database=cppe";
+        string _connexionString = ConnectSQL.GiveLocalConnection();
        /* int role;
         int id;
         string nom;

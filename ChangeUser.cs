@@ -14,7 +14,7 @@ namespace ppe1
 {
     public partial class ChangeUser : Form
     {
-        string _connexionString = "server = localhost; user id = root;database=cppe";
+        string _connexionString = ConnectSQL.GiveLocalConnection();
         InfoUser infoUser;
         public ChangeUser()
         {

@@ -39,6 +39,7 @@
             this.addButton = new System.Windows.Forms.Button();
             this.nomLabel = new System.Windows.Forms.Label();
             this.tbNom = new System.Windows.Forms.TextBox();
+            this.buttonSuppParticipant = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -55,7 +56,7 @@
             this.tbDpt.Location = new System.Drawing.Point(177, 141);
             this.tbDpt.Name = "tbDpt";
             this.tbDpt.Size = new System.Drawing.Size(198, 20);
-            this.tbDpt.TabIndex = 36;
+            this.tbDpt.TabIndex = 3;
             // 
             // label1
             // 
@@ -71,16 +72,17 @@
             this.tbEmail.Location = new System.Drawing.Point(177, 188);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(198, 20);
-            this.tbEmail.TabIndex = 35;
+            this.tbEmail.TabIndex = 4;
             // 
             // buttonPDF
             // 
-            this.buttonPDF.Location = new System.Drawing.Point(207, 311);
+            this.buttonPDF.Location = new System.Drawing.Point(188, 311);
             this.buttonPDF.Name = "buttonPDF";
-            this.buttonPDF.Size = new System.Drawing.Size(97, 23);
-            this.buttonPDF.TabIndex = 45;
-            this.buttonPDF.Text = "Generer PDF";
+            this.buttonPDF.Size = new System.Drawing.Size(127, 23);
+            this.buttonPDF.TabIndex = 6;
+            this.buttonPDF.Text = "Generer un badge";
             this.buttonPDF.UseVisualStyleBackColor = true;
+            this.buttonPDF.Visible = false;
             this.buttonPDF.Click += new System.EventHandler(this.buttonPDF_Click);
             // 
             // labelPrenom
@@ -97,14 +99,14 @@
             this.tbPrenom.Location = new System.Drawing.Point(177, 95);
             this.tbPrenom.Name = "tbPrenom";
             this.tbPrenom.Size = new System.Drawing.Size(198, 20);
-            this.tbPrenom.TabIndex = 34;
+            this.tbPrenom.TabIndex = 2;
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(217, 263);
+            this.addButton.Location = new System.Drawing.Point(258, 263);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
-            this.addButton.TabIndex = 43;
+            this.addButton.TabIndex = 5;
             this.addButton.Text = "Ajouter";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
@@ -123,13 +125,25 @@
             this.tbNom.Location = new System.Drawing.Point(177, 50);
             this.tbNom.Name = "tbNom";
             this.tbNom.Size = new System.Drawing.Size(198, 20);
-            this.tbNom.TabIndex = 33;
+            this.tbNom.TabIndex = 1;
+            // 
+            // buttonSuppParticipant
+            // 
+            this.buttonSuppParticipant.Location = new System.Drawing.Point(177, 263);
+            this.buttonSuppParticipant.Name = "buttonSuppParticipant";
+            this.buttonSuppParticipant.Size = new System.Drawing.Size(75, 23);
+            this.buttonSuppParticipant.TabIndex = 48;
+            this.buttonSuppParticipant.Text = "Supprimer";
+            this.buttonSuppParticipant.UseVisualStyleBackColor = true;
+            this.buttonSuppParticipant.Visible = false;
+            this.buttonSuppParticipant.Click += new System.EventHandler(this.buttonSuppParticipant_Click);
             // 
             // AddParticipant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(499, 378);
+            this.Controls.Add(this.buttonSuppParticipant);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbDpt);
             this.Controls.Add(this.label1);
@@ -161,5 +175,6 @@
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Label nomLabel;
         private System.Windows.Forms.TextBox tbNom;
+        private System.Windows.Forms.Button buttonSuppParticipant;
     }
 }

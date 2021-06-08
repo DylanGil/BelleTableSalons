@@ -9,7 +9,7 @@ namespace ppe1
 {
     public class InfoUser
     {
-        string _connexionString = "server = localhost; user id = root;database=cppe";
+        string _connexionString = ConnectSQL.GiveLocalConnection();
         private int _id;
         private int _role;
         private string _nom;

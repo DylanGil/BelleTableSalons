@@ -54,7 +54,7 @@ namespace ppe1
         {
             //DateTime localDate = DateTime.Now; //il est pas au bon format
             string localDateString = DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
-            string _connexionString = "server = localhost; user id = root;database=cppe";
+            string _connexionString = ConnectSQL.GiveLocalConnection();
             MySqlConnection conn = new MySqlConnection(_connexionString);
             conn.Open();
             if (connectionDeconnection == "connection")

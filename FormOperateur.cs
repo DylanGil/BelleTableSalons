@@ -15,10 +15,6 @@ namespace ppe1
     public partial class FormOperateur : Form
     {
         string _connexionString = ConnectSQL.GiveLocalConnection();
-        int niveau;
-        int id;
-        string nom;
-        string prenom;
         InfoUser infoUser;
         public FormOperateur()
         {
@@ -44,7 +40,7 @@ namespace ppe1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bonjour " + infoUser.Nom + " " + infoUser.Prenom + "\nVous êtes un : Opérateur\nVotre ID est : " + infoUser.Id);
+            MessageBox.Show("Bonjour "); //+ infoUser.Nom + " " + infoUser.Prenom + "\nVous êtes un : Opérateur\nVotre ID est : " + infoUser.Id);
         }
         private void checkSalons()
         {
@@ -88,6 +84,13 @@ namespace ppe1
                 addSalon.ShowDialog();
                 checkSalons();
             }
+        }
+
+        private void buttonAddSalon_Click(object sender, EventArgs e)
+        {
+            AddSalon addSalon = new AddSalon();
+            addSalon.ShowDialog();
+            checkSalons();
         }
     }
 }
