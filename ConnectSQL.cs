@@ -20,6 +20,10 @@ namespace ppe1
         {
             return "server=78.199.84.127;user id = root;password=aze!123; database=belletable_salons_dylang";
         }
+        public static string GiveDylanConnection() //notWorking
+        {
+            return "server=687h2.myd.infomaniak.com;user id = 687h2_dgilamaro;password=18122001Dylan; database=687h2_salonsbelletable";
+        }
     }
 
     

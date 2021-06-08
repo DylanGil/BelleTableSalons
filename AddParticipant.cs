@@ -41,34 +41,42 @@ namespace ppe1
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            try
-            { 
-                MySqlConnection conn = new MySqlConnection(_connexionString);
-                conn.Open();
-                string sql = "";
-                string createOrEdit = "";
-                if (addButton.Text == "Ajouter")
-                {
-                    sql = "INSERT INTO participants (nom, prenom, departement, email, idsalon) VALUES (\'" + tbNom.Text + "\',\'" + tbPrenom.Text + "\',\'" + tbDpt.Text + "\',\'" + tbEmail.Text + "\',\'" + idSalon + "\')";
-                    createOrEdit = "Création";
-                }
-                else if (addButton.Text == "Modifier")
-                {
-                    sql = "UPDATE `participants` SET `nom` = '" + tbNom.Text + "', `prenom` = '" + tbPrenom.Text + "', `departement` = '" + tbDpt.Text + "', `email` = '" + tbEmail.Text + "', `idsalon` = '" + idSalon + "' WHERE `id` = " + idParticipant + ";";
-                    createOrEdit = "Modification";
+            if (tbNom.Text == "" || tbPrenom.Text == "" || tbDpt.Text == "" || tbEmail.Text == "")
+            {
+                MessageBox.Show("Veuiller renseigner tout les champs");
+            }
+            else
+            {
 
-                }
-                MySqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = sql;
-                cmd.ExecuteNonQuery();
-                //string createOrEdit = (addButton.Text == "Ajouter") ? "Création" : "Modification";
-                MessageBox.Show(createOrEdit + " éffectué");
-                this.DialogResult = DialogResult.OK;
+                try
+                {
+                    MySqlConnection conn = new MySqlConnection(_connexionString);
+                    conn.Open();
+                    string sql = "";
+                    string createOrEdit = "";
+                    if (addButton.Text == "Ajouter")
+                    {
+                        sql = "INSERT INTO participants (nom, prenom, departement, email, idsalon) VALUES (\'" + tbNom.Text + "\',\'" + tbPrenom.Text + "\',\'" + tbDpt.Text + "\',\'" + tbEmail.Text + "\',\'" + idSalon + "\')";
+                        createOrEdit = "Création";
+                    }
+                    else if (addButton.Text == "Modifier")
+                    {
+                        sql = "UPDATE `participants` SET `nom` = '" + tbNom.Text + "', `prenom` = '" + tbPrenom.Text + "', `departement` = '" + tbDpt.Text + "', `email` = '" + tbEmail.Text + "', `idsalon` = '" + idSalon + "' WHERE `id` = " + idParticipant + ";";
+                        createOrEdit = "Modification";
+
+                    }
+                    MySqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandText = sql;
+                    cmd.ExecuteNonQuery();
+                    //string createOrEdit = (addButton.Text == "Ajouter") ? "Création" : "Modification";
+                    MessageBox.Show(createOrEdit + " éffectué");
+                    this.DialogResult = DialogResult.OK;
                 }
                 catch (Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine(ex);
-                MessageBox.Show(ex.ToString());
+                    MessageBox.Show(ex.ToString());
+                }
             }
         }
 

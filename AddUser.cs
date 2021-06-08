@@ -29,10 +29,16 @@ namespace ppe1
                 rbSelected = 1;
             if (rbInvite.Checked == true)
                 rbSelected = 0;
-            
-            MessageBox.Show(infoUser.Save("creation", tbNom.Text, tbPrenom.Text, tbPassword.Text, rbSelected, 0, tbEmail.Text, tbDpt.Text));
-            this.DialogResult = DialogResult.OK;
 
+            if (tbNom.Text == "" || tbPrenom.Text == "" || tbEmail.Text == "" || tbDpt.Text == "" || tbPassword.Text == "")
+            {
+                MessageBox.Show("Veuiller renseigner tout les champs");
+            }
+            else
+            {
+                MessageBox.Show(infoUser.Save("creation", tbNom.Text, tbPrenom.Text, tbPassword.Text, rbSelected, 0, tbEmail.Text, tbDpt.Text));
+                this.DialogResult = DialogResult.OK;
+            }
         }
     }
 }

@@ -24,6 +24,8 @@ namespace ppe1
             //creation d'un salon
             InitializeComponent();
             addOrEdit = "add";
+            tabPages.Visible = false;
+            addParticipantButton.Visible = false;
         }
 
         public AddSalon(string idSalonn, string libelleSalonn, DateTime dateSalon, string lieuSalon)
@@ -53,30 +55,37 @@ namespace ppe1
         private void addButton_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection(_connexionString);
-            try
+            if(tbLibelle.Text=="" || tbLieu.Text == "")
             {
-                conn.Open();
-                string sql = "";
-                if (addOrEdit == "add")
+                MessageBox.Show("Veuiller renseigner tout les champs");
+            }
+            else
+            {
+                try
                 {
-                    sql = "INSERT INTO `salons` (`libelle`, `date`, `lieu`) VALUES ('" + tbLibelle.Text + "', '" + tbDateSalon.Value.ToString("yyyy-MM-dd") + "', '" + tbLieu.Text + "');";
-                }
-                else if(addOrEdit == "edit")
-                {
-                    sql = "UPDATE `salons` SET `libelle` = '" + tbLibelle.Text + "', `date` = '" + tbDateSalon.Value.ToString("yyyy-MM-dd") + "', `lieu` = '" + tbLieu.Text + "' WHERE `id` = " + idSalon +";";
+                    conn.Open();
+                    string sql = "";
+                    if (addOrEdit == "add")
+                    {
+                        sql = "INSERT INTO `salons` (`libelle`, `date`, `lieu`) VALUES ('" + tbLibelle.Text + "', '" + tbDateSalon.Value.ToString("yyyy-MM-dd") + "', '" + tbLieu.Text + "');";
+                    }
+                    else if(addOrEdit == "edit")
+                    {
+                        sql = "UPDATE `salons` SET `libelle` = '" + tbLibelle.Text + "', `date` = '" + tbDateSalon.Value.ToString("yyyy-MM-dd") + "', `lieu` = '" + tbLieu.Text + "' WHERE `id` = " + idSalon +";";
                     
+                    }
+                    MySqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandText = sql;
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Création/Modification éffectué");
                 }
-                MySqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = sql;
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Création/Modification éffectué");
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine(ex);
-            }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine(ex);
+                }
 
-            this.DialogResult = DialogResult.OK;
+                this.DialogResult = DialogResult.OK;
+            }
         }
 
         private void checkParticipants()

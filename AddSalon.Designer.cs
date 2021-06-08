@@ -68,7 +68,7 @@
             this.addButton.BackColor = System.Drawing.Color.MintCream;
             this.addButton.Location = new System.Drawing.Point(430, 224);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.Size = new System.Drawing.Size(102, 34);
             this.addButton.TabIndex = 37;
             this.addButton.Text = "Ajouter";
             this.addButton.UseVisualStyleBackColor = false;
